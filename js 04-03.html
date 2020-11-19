@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("------1번 형태의 함수 출력------");
+
+        function add1() {
+            var a = 10;
+            var b = 5;
+            console.log(" 두 수의 합은 :" + (a + b));
+        }
+
+        function sub1() {
+            var a = 10;
+            var b = 5
+            console.log(" 두 수의 차은 :" + (a - b))
+        }
+
+        function multi1() {
+            var a = 10;
+            var b = 5
+            console.log(" 두 수의 곱은 :" + (a * b))
+        }
+
+        function div1() {
+            var a = 10;
+            var b = 5
+            console.log(" 두 수의 나눗셈은 :" + (a / b))
+        }
+        add1();
+        sub1();
+        multi1();
+        div1();
+
+        console.log("------2번 형태의 함수 출력------");
+        var a = 10;
+        var b = 5;
+        function add2(a,b) {            
+            console.log(" 두 수의 합은 :" + (a + b));
+        }
+
+        function sub2(a,b) {            
+            console.log(" 두 수의 차는 :" + (a - b));
+        }
+
+        function multi2(a,b) {            
+            console.log(" 두 수의 곱은 :" + (a * b));
+        }
+
+        function div2(a,b) {                        
+            console.log(" 두 수의 나눗셈은 :" + (a / b));
+        }
+        
+        add2(a,b);
+        sub2(a,b);
+        multi2(a,b);
+        div2(a,b);
+    
+        console.log("------3번 형태의 함수 출력------");
+
+        function add3() {
+            var a = 10;
+            var b = 5;
+            return a + b;
+        }
+
+        function sub3() {
+            var a = 10;
+            var b = 5;
+            return a - b;
+        }
+
+        function multi3() {
+            var a = 10;
+            var b = 5;
+            return a * b;
+        }
+
+        function div3() {
+            var a = 10;
+            var b = 5;
+            return a / b;
+        }
+
+        console.log("합:"+add3());
+        console.log("차:"+sub3());
+        console.log("곱:"+multi3());
+        console.log("나눗셈:"+div3());
+
+        console.log("------4번 형태의 함수 출력------");
+
+        var a = 10;
+        var b = 5;
+        function add4(a,b) {            
+            return a + b;
+        }
+
+        function sub4(a,b) {            
+            return a - b;
+        }
+
+        function multi4(a,b) {            
+            return a * b;
+        }
+
+        function div(a,b) {            
+            return a / b;
+        }
+        
+        console.log("합"+add3(a,b));
+        console.log("차"+sub3(a,b));
+        console.log("곱"+multi3(a,b));
+        console.log("나눗셈"+div3(a,b));
+
+        //문제 4) 사용자 입력을 받아서 해당하는 단수의 구구단을 출력하는 프로그램을 작성하세요
+        // 구구단 부분이 함수로 만들어 져야 함
+
+        var number = prompt("원하는 단 입력:");
+
+        function googoo (num) {
+            
+            for( var i = 1; i<10; i++) {
+                console.log(num +" * " + i + " = " + num*i);
+            }
+        }
+        googoo(number);
+
+        //문제 5) 매개변수를 3개를 받는 함수 하나를 생성하여 입력된 기호에 따라 사칙연산을 진행하는 프로그램을 작성하세요.
+        var num1=prompt("첫번째 수 입력");
+        var op = prompt("연산자 입력:")
+        var num2=prompt("두번째 수 입력");
+
+        function input_op (su1,su2,giho) {
+            switch(giho){
+                case '+':
+                    return su1+su2;
+                    
+                case '-':
+                    return su1-su2;
+                    
+                case '*':
+                    return su1*su2;
+                    
+                case '/':
+                    return su1/su2;                    
+            }
+        }
+        // var result = input_op(num1,num2,op);
+        console.log(num1+op+num2+"="+input_op(num1,num2,op))
+
+        var num1 =prompt("숫자를 입력하세요");
+        num1 = parseInt(num1);
+        if (isNaN(num1)== true) {
+            console.log("숫자가 입력되지 않았습니다.")
+        }
+        else {
+            num = parseInt(num);
+            console.log(num*num);
+        }
+        
+        //문제 6)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
