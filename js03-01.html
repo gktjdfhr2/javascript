@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js03-01</title>
+    <script>
+        var fruits =prompt("과일을 입력하시오");
+        console.log(fruits);
+        var price = 0;
+        switch(fruits) {
+            case "바나나":
+            price=200;
+            break;
+            case "사과":
+            price=300;
+            break;
+            case "체리":
+            price=400;
+            break;
+            default:
+                console.log("팔지 않습니다");                             
+        }
+        console.log(fruits+"의 가격:"+price);
+        
+        var day = new Date().getDay();
+        console.log(day);
+        var toDay = "";
+        switch(day) {
+            case 1:
+                toDay="월요일";
+                break;            
+            case 2:
+            toDay="화요일";
+                break;
+            case 3:
+            toDay="수요일";
+                break;
+            case 4:
+            toDay="목요일";
+                break;
+            case 5:
+            toDay="금요일";
+                break;
+            case 6:
+            toDay="토요일";
+                break;
+            case 7:
+            toDay="일요일";
+                break;
+        }
+        console.log("오늘은"+toDay+"입니다.");
+
+        // 문제 1 ) 위의 요일 입력하는 부분을 사용자가 날짜를 입력하면 해당하는 요일이 출력되는 프로그램을 작성하세요  
+        var day2= new Date(prompt("yyyy-mm-dd형식으로 날짜 입력")).getDay();      
+        var toDay2 = "";
+        
+        if(day2==1)
+            toDay2="월요일";
+        else if(day2==2)
+            toDay2="화요일";
+        else if(day2==3)
+            toDay2="수요일";
+        else if(day2==4)
+            toDay2="목요일";
+        else if(day2==5)
+            toDay2="금요일";
+        else if(day2==6)
+            toDay2="토요일";
+        else if(day2==0)
+            toDay2="일요일";
+        console.log("요일"+toDay2);
+        console.log("오늘은"+toDay2+"입니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

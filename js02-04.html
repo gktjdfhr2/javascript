@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 2-4</title>
+    <script>
+        var score = prompt("점수를 입력하세요");
+        if (score>=90) {
+            console.log("당신의 점수는 A입니다.")
+        }
+        else if (score>=80) {
+            console.log("당신의 점수는 B입니다.")
+        }
+        else if (score>=70) {
+            console.log("당신의 점수는 C입니다.")
+        }
+        else if (score>=60) {
+            console.log("당신의 점수는 D입니다.")
+        }
+        else{
+            console.log("당신의 점수는 F입니다.")
+        }
+
+        var result = prompt("당신의 탕수육 먹는 스타일은 부먹입니까? 찍먹입니까?");
+
+        if (result=="부먹") {
+            console.log("저는 부먹입니다.");
+        }
+        else {
+            console.log("저는 찍먹입니다.");
+        }
+
+        //문제 1) 중국집에 가서 먹고싶은 메뉴를 선택하는 프로그램을 작성하세요
+        //5가지 음식을 하나씩 비교
+        //else if 문을 사용하여 만드세요
+        //자장면, 짬뽕, 볶음밥, 잡채밥, 우동
+
+        var china= prompt("먹고싶은 음식을 입력하세요");
+        if (china=="자장면") {
+            console.log("사장님 자장면 주세요");
+        }
+        else if (china=="짬뽕") {
+            console.log("사장님 짬뽕 주세요");
+        }
+        else if (china=="볶음밥") {
+            console.log("사장님 볶음밥 주세요");
+        }
+        else if (china=="잡채밥") {
+            console.log("사장님 잡채밥 주세요");
+        }
+        else if (china=="우동") {
+            console.log("사장님 우동 주세요");
+        }
+        else {
+            console.log("원하시는 메뉴는 저희 가게에 없습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

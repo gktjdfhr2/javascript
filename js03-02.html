@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js03-02</title>
+    <script>
+        //반복문
+        //for, while, do ~ while, for ~ in
+
+        for (var size = 10; size <= 35; size += 5) {
+            document.write("<span ");
+            document.write("style='font-size:" + size + "px'>");
+            document.write(size + "px");
+            document.write("</span>");
+
+        }
+        console.log("==========================")
+        var dan = prompt("원하는 단수 입력");
+        for(var i = 2; i<10; i ++) {
+            console.log(dan + " *" + i + " = " + (dan*i));
+        }
+
+        //문제3) 아래의 형태를 출력하는 프로그램을 작성하세요
+
+        var star="*"
+        for(var i=0;i<5;i++) {
+            console.log(star);
+            star+="*";
+        }
+        document.write("<br>");
+        for(var i = 0; i < 5 ; i++) {
+            for(var j = 0; j <= i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        for(var i = 0; i < 5 ; i++) {
+            for(var j = 4; j >= i; j--){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for(var i = 0; i < 5; i++){
+            for(var j = 5-i;j >= i; j--) {
+                document.write(" ");
+            }
+            for(var k = 0; k <= i; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        
+        var count =1;
+        var sum=0;
+        while(count<=10){1
+
+            sum+=count;
+                        
+            console.log("1 에서 "+count+"까지의 합:"+sum);
+            count+=1;
+        }
+
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
