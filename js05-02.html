@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 5-2</title>
+    <script>
+        // 객체를 데이터 타입으로 사용 
+        // object 타입
+        // 배열과 같이 하나의 이름으로 여러개의 데이터를 저장할 수 있는 데이터 타입
+        // 선언 기호는'{}' 각각의 데이터 구분은 ','
+        // 배열은 index 를 사용하여 각각의 데이터를 구분하지만, opject 타입은 key 라는것이 존재하여 각각의 데이터와 1:1로 연결되어 있음(key와 value로 구분되어짐)
+
+        // key와 value는 ':' 으로 구분함
+        // object 타입의 각각의 요소에 접근 시 ''기호 사용
+        // 파이썬 언어의 딕셔너리 자료형과 동일한 형태 ( 자바 언어에서는 hashmap 타입과 동일)
+        // 배열과 동일하게 모든 데이터 타입을 저장할수 있음
+
+        // object 타입 선언
+        // var object명 = {}; 빈 object 타입
+        // var object명 = {key1:value1, key2:value2, ...}; 
+
+        // obj.key명 = 데이터
+
+        // object 타입의 요소의 값 출력
+        // obj.key명
+        // console.log(obj.key)
+
+        var car = {
+            name: "말리부",
+            type: "세단",
+            color: "검정",
+            size: "중형"
+        }
+
+        console.log(car.name);
+        console.log(car.size);
+
+        car.color = "회색";
+        console.log(car.color);
+
+        //배열은 동일한 형태의 데이터를 저장하기에 최적화 되어 있다.
+
+        // 배열과 object 타입의 차이점
+        // 배열은 동일한 형태의 데이터를 저장하기에 최적화되어 있음
+        // 배열은 index를 사용하기 때문에 저장된 ㄷ이터의 순서가 중요함
+        // object 타입은 하나의 사물을 나타내는 여러가지 데이터를 모아두기에 최적화 되어 있음
+        //object 타입은 key 와 value가 한 쌍으로 연결되어 있다.
+        var arrbbs1 = [1329229, "연간 유기견 유기묘", "15:09", 8, 0]
+        var arrbbs1 = [1329228, "연asedfasd묘", "12:09", 10, 0]
+        var arrbbs1 = [1329227, "연간ffdsafw", "11:49", 8, 0]
+
+        var objbbs1 = {
+            num: 1329229,
+            title: "연간 유기견 유기묘",
+            time: "15:09",
+            like: 8,
+            hate: 0
+        }
+        var objbbs2 = {
+            num: 1329228,
+            title: "연간 유기견 유기묘2",
+            time: "12:09",
+            like: 10,
+            hate: 0
+        }
+        var objbbs3 = {
+            num: 1329227,
+            title: "연간 유기견 유기묘3",
+            time: "11:49",
+            like: 8,
+            hate: 0
+        }
+
+        console.log(arrbbs1[0]);
+        console.log(arrbbs1[1]);
+        console.log(arrbbs1[2]);
+
+        console.log(objbbs1.num);
+        console.log(objbbs1.title);
+        console.log(objbbs1.time);
+        console.log(objbbs1.like);
+        console.log(objbbs1.hate);
+
+        console.log("-------for문으로 출력-----");
+
+        for (let i = 0; i < arrbbs1.length; i++) {
+            console.log(arrbbs1[i]);
+        }
+        console.log("------sort사용후 출력-----");
+        arrbbs1.sort();
+        for (let i = 0; i < arrbbs1.length; i++) {
+            console.log(arrbbs1[i]);
+        }
+
+        console.log("------object 타입을 출력-----");
+        for (var data in objbbs1) {
+            console.log(objbbs1[data]);
+        }
+        //각각의 게시물은 object 타입으로 저장하고, 이렇게 생성된 object 타입 변수 여러개를 하나의 배열에 넣어서 한번에 저송
+        var arrbbs = [];
+        arrbbs[0] = objbbs1;
+        arrbbs[1] = objbbs2;
+        arrbbs[2] = objbbs3;
+
+        console.log(arrbbs);
+        console.log("---------------------------");
+        for (var i = 0; i < arrbbs.length; i++) {
+
+            console.log(arrbbs[i].num);
+            console.log(arrbbs[i].title);
+            console.log(arrbbs[i].time);
+            console.log(arrbbs[i].like);
+            console.log(arrbbs[i].hate);
+        }
+
+        document.write("<table border='1'>")
+        document.write("<thead>");
+        document.write("<tr>");
+        document.write("<th>번호</th>");
+        document.write("<th>제목</th>");
+        document.write("<th>시간</th>");
+        document.write("<th>좋아요</th>");
+        document.write("<th>싫어요</th>");
+        document.write("</tr>");
+        document.write("</thead>");
+
+
+        document.write("<tbody>");
+        for (var i = 0; i < arrbbs.length; i++) {
+            document.write("<tr>");
+            document.write("<td>" + arrbbs[i].num + "</td>");
+            document.write("<td>" + arrbbs[i].title + "</td>");
+            document.write("<td>" + arrbbs[i].time + "</td>");
+            document.write("<td>" + arrbbs[i].like + "</td>");
+            document.write("<td>" + arrbbs[i].hate + "</td>");
+            document.write("</tr>");
+
+        }
+
+        document.write("</tbody>");
+        document.write("</table>");
+
+        //다차원 배열
+
+        //배열의 요소로 배열을 사용한 배열
+
+       
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
